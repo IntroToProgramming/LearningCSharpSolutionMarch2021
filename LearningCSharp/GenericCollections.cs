@@ -40,6 +40,57 @@ namespace LearningCSharp
             Assert.Equal("Pizza", mealPlan["tuesday"].MainCourse);
 
         }
-        
+        [Fact]
+        public void CollectionInitializers()
+        {
+            var favoriteNumbers = new List<int>()
+            {
+                9, 20, 108
+            };
+            Assert.Equal(20, favoriteNumbers[1]);
+
+            var friends = new Dictionary<char, string>
+            {
+                { 's', "Sean Carlin" },
+                { 'd', "David" },
+                { 'j', "Jessika" }
+            };
+            Assert.Equal("David", friends['d']);
+
+            friends['s'] = "Susan";
+            friends['x'] = "Xander";
+
+            // Assert.Equal("Yanne", friends['y']);
+
+            Assert.True(friends.ContainsKey('d'));
+            Assert.False(friends.ContainsKey('y'));
+
+            
+        }
+
+        [Fact]
+        public void EnumeratingCollections()
+        {
+            // Enumerating means "going through one at a time with a goal"
+            var favoriteNumbers = new List<int>()
+            {
+                9, 20, 108
+            };
+            
+
+            var friends = new Dictionary<char, string>
+            {
+                { 's', "Sean Carlin" },
+                { 'd', "David" },
+                { 'j', "Jessika" }
+            };
+
+            int total = 0;
+            foreach(int current in favoriteNumbers)
+            {
+                total += current;
+            }
+            Assert.Equal(137, total);
+        }
     }
 }
