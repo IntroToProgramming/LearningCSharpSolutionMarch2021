@@ -6,6 +6,7 @@
         public string Desert;
         public bool HasSides;
         public string Drinks;
+        public string SpicyLevel;
 
         public string GetPlan()
         {
