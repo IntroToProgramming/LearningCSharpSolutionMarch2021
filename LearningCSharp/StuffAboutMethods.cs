@@ -57,6 +57,16 @@ namespace LearningCSharp
             Assert.Equal(9, x);
         }
         
+        [Fact]
+        public void NullableTypes()
+        {
+            DateTime? birthday = null;
+            
+            if(birthday.HasValue)
+            {
+                
+            }
+        }
 
 
 
@@ -66,6 +76,8 @@ namespace LearningCSharp
             length = fullName.Length;
             return fullName;
         }
+
+
         public void Swap<T>(ref T x, ref T y)
         {
             T temp = x;
