@@ -40,5 +40,10 @@ namespace LearningCSharp
 
         public decimal CreditLimit { get; private set; } = 5000;
 
+        public string GetInfo()
+        {
+            return $"This is {FirstName} {LastName} and their Credit Limit Is {CreditLimit:c}";
+        }
+
     }
 }
