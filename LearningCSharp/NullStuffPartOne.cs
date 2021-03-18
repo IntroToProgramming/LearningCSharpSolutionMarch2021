@@ -44,7 +44,7 @@ namespace LearningCSharp
         [Fact]
         public void ElvisOperator()
         {
-            Dinner d = new Dinner { MainCourse = "Tacos" };
+            Dinner d = null;
 
             var mainCourse = d?.MainCourse ?? "None Assigned";
             //if(d != null)
