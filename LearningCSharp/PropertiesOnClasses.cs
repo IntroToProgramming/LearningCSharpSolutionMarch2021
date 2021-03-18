@@ -17,6 +17,8 @@ namespace LearningCSharp
                 FirstName = "Joe",
                 LastName = "Schmidt"
             };
+
+            
           
             Assert.Equal("Joe", cust.FirstName);
             Assert.Equal("Schmidt", cust.LastName);
